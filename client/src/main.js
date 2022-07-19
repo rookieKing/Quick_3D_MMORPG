@@ -133,12 +133,6 @@ class CrappyMMOAttempt {
     this.entityManager_.Add(levelUpSpawner, 'level-up-spawner');
   }
 
-  _OnWindowResize() {
-    this.camera_.aspect = window.innerWidth / window.innerHeight;
-    this.camera_.updateProjectionMatrix();
-    this.threejs_.setSize(window.innerWidth, window.innerHeight);
-  }
-
   RAF_() {
     requestAnimationFrame((t) => {
       if (this.previousRAF_ === null) {
